@@ -1,0 +1,32 @@
+{
+  "index": 645,
+  "phase": 2,
+  "batch": 72,
+  "name": "ion-ui-editor-line",
+  "planned_name": "ion-ui-editor-line",
+  "language": "Lua",
+  "category": "Frontend apps",
+  "goal": "Develop a Lua command-oriented project for editor scenarios with transition tables, invalid-transition tests, and bounded memory input sets.",
+  "repository_url": "https://github.com/ZachL111/ion-ui-editor-line",
+  "verification_command": "powershell -NoProfile -ExecutionPolicy Bypass -File scripts/verify.ps1",
+  "model": {
+    "inputs": [
+      "demand",
+      "capacity",
+      "latency",
+      "risk",
+      "weight"
+    ],
+    "threshold": 153,
+    "risk_penalty": 4,
+    "latency_penalty": 4,
+    "weight_bonus": 2,
+    "decision_rule": "accept when score is greater than or equal to threshold, otherwise review"
+  },
+  "quality_gates": [
+    "readme constraint scan",
+    "fixture presence check",
+    "metadata JSON parse",
+    "language verifier"
+  ]
+}
