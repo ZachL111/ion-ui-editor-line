@@ -1,0 +1,73 @@
+{
+  "repo": "ion-ui-editor-line",
+  "language": "Lua",
+  "category": "Frontend apps",
+  "goal": "Develop a Lua command-oriented project for editor scenarios with transition tables, invalid-transition tests, and bounded memory input sets.",
+  "review_model": {
+    "terms": [
+      "view drift",
+      "state pressure",
+      "layout risk",
+      "interaction cost"
+    ],
+    "lanes": [
+      "ship",
+      "watch",
+      "hold"
+    ],
+    "score": "signal * 2 + slack + confidence - drag * 3",
+    "purpose": "surface the domain-specific cases that need the most careful review"
+  },
+  "cases": [
+    {
+      "name": "baseline",
+      "focus": "view drift",
+      "signal": 61,
+      "slack": 28,
+      "drag": 18,
+      "confidence": 47,
+      "score": 143,
+      "lane": "ship"
+    },
+    {
+      "name": "stress",
+      "focus": "state pressure",
+      "signal": 50,
+      "slack": 31,
+      "drag": 13,
+      "confidence": 83,
+      "score": 175,
+      "lane": "ship"
+    },
+    {
+      "name": "edge",
+      "focus": "layout risk",
+      "signal": 72,
+      "slack": 53,
+      "drag": 30,
+      "confidence": 92,
+      "score": 199,
+      "lane": "ship"
+    },
+    {
+      "name": "recovery",
+      "focus": "interaction cost",
+      "signal": 57,
+      "slack": 28,
+      "drag": 26,
+      "confidence": 94,
+      "score": 158,
+      "lane": "ship"
+    },
+    {
+      "name": "stale",
+      "focus": "view drift",
+      "signal": 53,
+      "slack": 48,
+      "drag": 24,
+      "confidence": 82,
+      "score": 164,
+      "lane": "ship"
+    }
+  ]
+}
